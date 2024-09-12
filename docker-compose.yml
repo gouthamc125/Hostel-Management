@@ -7,7 +7,8 @@ services:
     ports:
       - "5000:5000"
     env_file:
-      - ./server/.env
+      - ./server/.env 
+    command: sh -c "npm install && node ./server/seeder.js"
     networks:
       - app-network 
     

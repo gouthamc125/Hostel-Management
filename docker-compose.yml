@@ -2,19 +2,19 @@ version: '3'
 
 services:
   backend:
-    build: ./server
-    container_name: server
+    build: ./backend
+    container_name: backend
     ports:
       - "5000:5000"
     env_file:
-      - ./server/.env 
-    command: sh -c "npm install && node ./server/seeder.js"
+      - ./backend/.env 
+    command: sh -c "npm install mongoose && node ./server/seeder.js"
     networks:
       - app-network 
     
   frontend:
     build: ./frontend
-    container_name: backend
+    container_name: frontend
     ports:
       - "3000:3000"
     networks:

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: gouthamc125/frontend:latest
+        image: gouthamc125/hostelfrontend:latest
         ports:
         - containerPort: 3000
 ---
